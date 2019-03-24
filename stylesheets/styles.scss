@@ -1,0 +1,467 @@
+@import "normalize";
+
+%nostyle-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+html {
+  font-size: 16px;
+  line-height: 1.4;
+  color: #555;
+  font-family: "Noto Sans TC", sans-serif;
+}
+
+a {
+  color: #808080;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #555;
+  //text-decoration: underline;
+}
+
+.container {
+  width: 1080px;
+  margin: 0 auto;
+  //background: #feaec9;
+}
+
+.page-header {
+  .top-line {
+    background: #000;
+    padding: 10px;
+    text-align: center;
+    color: #fff;
+  }
+  .top-black {
+    height: 50px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    flex-direction: row;
+    margin: 0 auto;
+    background: #fbdee2;
+
+    .mainleft {
+      width: 35%;
+      ul {
+        @extend %nostyle-list;
+        width: 400px;
+        display: flex;
+        justify-content: flex-start;
+        float: left;
+      }
+
+      a {
+        color: #808080;
+        font-size: 18px;
+        padding: 12px;
+      }
+      a:hover {
+        color: #feaec9;
+        background: #000; /*滑鼠一上變色*/
+      }
+    }
+
+    .main-title {
+      width: 30%;
+      h2 {
+        display: flex;
+        justify-content: center;
+        margin: 0;
+
+        a {
+          color: #000;
+        }
+      }
+    }
+    .button {
+      width: 35%;
+      ul {
+        @extend %nostyle-list;
+        display: flex;
+        justify-content: flex-end;
+      }
+      li {
+        size: 0;
+      }
+
+      a {
+        font-size: 20px;
+        padding: 12px;
+      }
+      a:hover {
+        color: #feaec9;
+        background: #000; /*滑鼠一上變色*/
+      }
+
+      i {
+        padding: 12px;
+        flex-direction: row;
+      }
+    }
+  }
+}
+
+.index-image {
+  height: 800px;
+  margin: 0;
+  background: url(../images/1.PNG) center center no-repeat;
+  background-size: cover; /*圖片自訂填滿區塊*/
+  position: relative; /*?*/
+}
+
+.item-things {
+  .class {
+    height: 80px;
+    display: flex;
+    align-items: center;
+    a {
+      font-size: 18px;
+      margin: 10px;
+      color: #808080;
+    }
+  }
+  .model {
+    display: flex;
+    flex-direction: row;
+    .pic-n-wod {
+      display: flex;
+      flex-direction: column;
+      width: 640px;
+      margin: 10px;
+      .pic {
+        width: 600px;
+        height: 600px;
+        margin: 20px;
+        background: url(../images/擷取.PNG);
+      }
+      .wod {
+        width: 600px;
+        margin: 16px;
+        font-size: 20px;
+        color: black;
+      }
+    }
+    .plus-n-plus {
+      display: flex;
+      flex-direction: column;
+      width: 640px;
+      margin: 20px;
+      .plus1 {
+        width: 390px;
+        margin: 10px;
+        border-bottom: #808080 3px solid;
+        h1 {
+          color: #000;
+          font-size: 36px;
+          margin: 0;
+          //background: #555;
+        }
+        h2 {
+          color: #000;
+          font-size: 36px;
+          //background: #555;
+        }
+        p {
+          margin: 0;
+        }
+        h3 {
+          color: rgb(85, 85, 85);
+          font-size: 24px;
+        }
+        select {
+          width: 300px;
+          height: 36px;
+        }
+        input {
+          width: 100px;
+          height: 36px;
+        }
+        input[type="button"] {
+          width: 390px;
+          height: 45px;
+          color: white;
+          background: black;
+          margin: 30px 0;
+          border: 0;
+        }
+      }
+      .plus2 {
+        width: 600px;
+        height: 50px;
+        margin: 10px;
+        h2 {
+          margin: 10px;
+          margin-left: 0;
+        }
+        .other {
+          display: flex;
+          margin: 30px;
+          margin-left: 0;
+          .other-item {
+            width: 100px;
+            height: 100px;
+            background: #808080;
+          }
+          .other-wod {
+            display: flex;
+            align-items: center;
+            font-size: 24px;
+            margin-left: 10px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.up-down-page {
+  display: flex;
+  justify-content: center;
+  margin: 50px;
+  input {
+    font-size: 24px;
+    margin: 30px;
+    background: transparent;
+    border: none;
+  }
+}
+
+.hot-items .container {
+  padding: 40px 0;
+  h2 {
+    color: #000000;
+    font-size: 40px;
+    text-align: center; /*置中*/
+  }
+  ul {
+    color: #000000;
+    font-size: 48px;
+    text-align: center; /*置中*/
+    list-style: none; /*把ul的標題用掉*/
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; /*換行*/
+  }
+
+  li {
+    margin: 20px;
+    width: 250px;
+    list-style: none; /*把ul的標題用掉*/
+    // display: flex;
+    float: left;
+    // justify-content: space-between;
+  }
+
+  a {
+    @extend %nostyle-list;
+    width: 250px;
+    height: 250px;
+    display: block;
+
+    text-align: center; /*置中*/
+    background-color: #e0e0e0;
+  }
+
+  p {
+    margin: 5px;
+    font-size: 24px;
+    text-align: center; /*置中*/
+  }
+}
+
+.let-buy {
+  background: #808080;
+  h1 {
+    padding: 40px 0;
+    margin: 0;
+    color: #ffffff;
+    font-size: 60px;
+    text-align: center; /*置中*/
+  }
+  p {
+    margin: 0;
+    //padding: 40px 0;
+    padding-bottom: 60px;
+    color: rgb(255, 255, 255);
+    font-size: 24px;
+    text-align: center; /*置中*/
+  }
+}
+
+.keep-shopping {
+  padding: 15px 0;
+}
+
+.cart-top {
+  display: flex;
+  padding: 5px;
+  border-bottom: #808080 1px solid;
+
+  .cart {
+    width: 50%;
+  }
+  .price {
+    width: 20%;
+  }
+  .amount {
+    width: 20%;
+  }
+  .total {
+    width: 20%;
+    text-align: right;
+  }
+}
+
+.buy-items {
+  display: flex;
+  padding: 20px 0;
+  border-bottom: #808080 1px solid;
+  img {
+    height: 100px;
+    width: 100px;
+  }
+  .items-information {
+    width: 370px;
+    padding-left: 20px;
+    .name {
+      margin-top: 10px;
+    }
+    .item-number {
+      font-size: 10px;
+    }
+    .delete {
+      margin: 15px 0;
+    }
+  }
+  input[type="text"] {
+    width: 50px;
+    margin-left: 150px;
+  }
+  .buy-total {
+    margin-left: 300px;
+    text-align: right;
+  }
+}
+
+.checkout-box {
+  display: flex;
+  padding: 20px 0;
+  margin-bottom: 50px;
+  .discount {
+    width: 75%;
+  }
+  .checkout {
+    width: 25%;
+    .price {
+      padding: 5px 0;
+      display: flex;
+      justify-content: space-between;
+    }
+    .fare{
+      padding: 5px 0;
+      display: flex;
+      justify-content: space-between;
+    }
+    .total{
+      padding: 5px 0;
+      display: flex;
+      justify-content: space-between;
+    }
+a{
+  margin-top: 20px;
+  display: block;
+  text-align: center;
+  background-color: #000;
+  color: #fff;
+  padding: 3% 0;
+}
+  }
+}
+
+.news-and-email {
+  display: flex;
+  height: 400px;
+  flex-direction: column;
+  margin: 0 auto;
+  position: relative;
+  background: #fbdee2;
+
+  h1 {
+    padding: 40px 0;
+    margin: 0;
+    color: #0a0a0a;
+    font-size: 60px;
+    text-align: center; /*置中*/
+  }
+
+  .mail {
+    //text-align: center;
+    display: flex;
+    justify-content: center;
+    padding: 0 0 20px 0;
+    input[type="text"] {
+      width: 800px;
+      height: 40px;
+      border: none;
+      border-bottom: #0a0a0a 2px solid;
+      text-indent: 45px;
+      //display: flex;
+      //justify-content: center;
+      //border-radius: 17px;/*四角變圓*/
+    }
+
+    i {
+      position: absolute;
+      left: 5px;
+      top: 255px;
+      margin-left: 362px;
+    }
+  }
+
+  .btn {
+    display: flex;
+    justify-content: center;
+  }
+
+  input[type="button"] {
+    width: 800px;
+    height: 45px;
+    color: white;
+    background: black;
+    border: 0;
+  }
+}
+.page-footer {
+  ul {
+    list-style: none; /*把ul的標題用掉*/
+    margin: 0;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    background: #000;
+    align-items: center;
+  }
+
+  li {
+    margin: 0 50px;
+    list-style: none; /*把ul的標題用掉*/
+  }
+
+  a {
+    color: #ffffff;
+    font-size: 18px;
+    padding: 12px;
+  }
+
+  a:hover {
+    color: #000;
+    background: #feaec9;
+  }
+}
