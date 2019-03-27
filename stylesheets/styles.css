@@ -342,7 +342,7 @@ template {
   display: none;
 }
 
-.page-header .top-black .mainleft ul, .page-header .top-black .button ul, .hot-items .container a {
+.page-header .top-black .mainleft ul, .page-header .top-black .button ul, .new-items ul {
   margin: 0;
   padding: 0;
   list-style: none;
@@ -477,11 +477,9 @@ a:hover {
 }
 
 .index-image {
-  height: 800px;
+  height: 500px;
   margin: 0;
-  background: url(../images/1.PNG) center center no-repeat;
-  background-size: cover;
-  /*圖片自訂填滿區塊*/
+  background: url(/images/shopping.jpg) center center no-repeat;
   position: relative;
   /*?*/
 }
@@ -648,58 +646,39 @@ a:hover {
   border: none;
 }
 
-.hot-items .container {
-  padding: 40px 0;
+.new-items {
+  padding: 0 0 40px 0;
 }
 
-.hot-items .container h2 {
-  color: #000000;
-  font-size: 40px;
+.new-items h2 {
   text-align: center;
-  /*置中*/
+  font-size: 2rem;
 }
 
-.hot-items .container ul {
-  color: #000000;
-  font-size: 48px;
-  text-align: center;
-  /*置中*/
-  list-style: none;
-  /*把ul的標題用掉*/
-  padding: 0;
+.new-items ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  /*換行*/
 }
 
-.hot-items .container li {
-  margin: 20px;
-  width: 250px;
-  list-style: none;
-  /*把ul的標題用掉*/
-  float: left;
-}
-
-.hot-items .container a {
-  width: 250px;
-  height: 250px;
-  display: block;
+.new-items ul h2 {
   text-align: center;
-  /*置中*/
-  background-color: #e0e0e0;
+  font-size: 1rem;
 }
 
-.hot-items .container p {
-  margin: 5px;
-  font-size: 24px;
+.new-items ul p {
   text-align: center;
-  /*置中*/
+}
+
+.new-items li {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 340;
+          flex: 0 0 340;
 }
 
 .let-buy {
@@ -945,5 +924,26 @@ a:hover {
 .page-footer a:hover {
   color: #000;
   background: #feaec9;
+}
+
+@media screen and (max-width: 1200px) {
+  .page-header {
+    width: 100%;
+  }
+  .news-and-email .mail i {
+    position: absolute;
+    left: 0px;
+    top: 255px;
+    margin-left: 205px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .container {
+    width: 100%;
+  }
+  .new-items {
+    width: 90%;
+  }
 }
 /*# sourceMappingURL=styles.css.map */

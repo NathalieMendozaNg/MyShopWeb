@@ -108,10 +108,10 @@ a:hover {
 }
 
 .index-image {
-  height: 800px;
+  height: 500px;
   margin: 0;
-  background: url(../images/1.PNG) center center no-repeat;
-  background-size: cover; /*圖片自訂填滿區塊*/
+  background: url(/images/shopping.jpg) center center no-repeat;
+  //background-size: cover; /*圖片自訂填滿區塊*/
   position: relative; /*?*/
 }
 
@@ -232,47 +232,28 @@ a:hover {
   }
 }
 
-.hot-items .container {
-  padding: 40px 0;
+.new-items {
+  padding: 0 0 40px 0;
+
   h2 {
-    color: #000000;
-    font-size: 40px;
-    text-align: center; /*置中*/
+    text-align: center;
+    font-size: 2rem;
   }
   ul {
-    color: #000000;
-    font-size: 48px;
-    text-align: center; /*置中*/
-    list-style: none; /*把ul的標題用掉*/
-    padding: 0;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap; /*換行*/
-  }
-
-  li {
-    margin: 20px;
-    width: 250px;
-    list-style: none; /*把ul的標題用掉*/
-    // display: flex;
-    float: left;
-    // justify-content: space-between;
-  }
-
-  a {
     @extend %nostyle-list;
-    width: 250px;
-    height: 250px;
-    display: block;
-
-    text-align: center; /*置中*/
-    background-color: #e0e0e0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    h2 {
+      text-align: center;
+      font-size: 1rem;
+    }
+    p {
+      text-align: center;
+    }
   }
-
-  p {
-    margin: 5px;
-    font-size: 24px;
-    text-align: center; /*置中*/
+  li {
+    flex: 0 0 340;
   }
 }
 
@@ -364,24 +345,24 @@ a:hover {
       display: flex;
       justify-content: space-between;
     }
-    .fare{
+    .fare {
       padding: 5px 0;
       display: flex;
       justify-content: space-between;
     }
-    .total{
+    .total {
       padding: 5px 0;
       display: flex;
       justify-content: space-between;
     }
-a{
-  margin-top: 20px;
-  display: block;
-  text-align: center;
-  background-color: #000;
-  color: #fff;
-  padding: 3% 0;
-}
+    a {
+      margin-top: 20px;
+      display: block;
+      text-align: center;
+      background-color: #000;
+      color: #fff;
+      padding: 3% 0;
+    }
   }
 }
 
@@ -463,5 +444,29 @@ a{
   a:hover {
     color: #000;
     background: #feaec9;
+  }
+}
+
+@media screen and (max-width: "1200px") {
+  .page-header {
+    width: 100%;
+  }
+  .news-and-email {
+    .mail i {
+      position: absolute;
+      left: 0px;
+      top: 255px;
+      margin-left: 205px;
+    }
+  }
+}
+
+@media screen and (max-width: "1024px") {
+  .container{
+    width: 100%;
+  }
+  .new-items{
+    width: 90%;
+
   }
 }
