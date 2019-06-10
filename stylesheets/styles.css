@@ -408,6 +408,7 @@ a:hover {
       -ms-flex-pack: start;
           justify-content: flex-start;
   float: left;
+  padding-left: 95px;
 }
 
 .page-header .top-black .mainleft a {
@@ -451,6 +452,7 @@ a:hover {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
+  padding-right: 85px;
 }
 
 .page-header .top-black .button li {
@@ -682,14 +684,14 @@ a:hover {
 }
 
 .let-buy {
-  background: #808080;
+  background: #BFBFBF;
 }
 
 .let-buy h1 {
   padding: 40px 0;
   margin: 0;
-  color: #ffffff;
-  font-size: 60px;
+  color: #fffafa;
+  font-size: 54px;
   text-align: center;
   /*置中*/
 }
@@ -698,7 +700,7 @@ a:hover {
   margin: 0;
   padding-bottom: 60px;
   color: white;
-  font-size: 24px;
+  font-size: 16px;
   text-align: center;
   /*置中*/
 }
@@ -845,12 +847,13 @@ a:hover {
   padding: 40px 0;
   margin: 0;
   color: #0a0a0a;
-  font-size: 60px;
+  font-size: 54px;
   text-align: center;
   /*置中*/
 }
 
 .news-and-email .mail {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -862,17 +865,15 @@ a:hover {
 
 .news-and-email .mail input[type="text"] {
   width: 800px;
-  height: 40px;
+  height: 32px;
   border: none;
   border-bottom: #0a0a0a 2px solid;
   text-indent: 45px;
 }
 
 .news-and-email .mail i {
-  position: absolute;
-  left: 5px;
-  top: 255px;
-  margin-left: 362px;
+  position: relative;
+  left: 40px;
 }
 
 .news-and-email .btn {
@@ -886,10 +887,11 @@ a:hover {
 
 .news-and-email input[type="button"] {
   width: 800px;
-  height: 45px;
+  height: 32px;
   color: white;
   background: black;
   border: 0;
+  margin-left: 30px;
 }
 
 .page-footer ul {
@@ -910,7 +912,7 @@ a:hover {
 }
 
 .page-footer li {
-  margin: 0 50px;
+  margin: 0px;
   list-style: none;
   /*把ul的標題用掉*/
 }
@@ -918,7 +920,7 @@ a:hover {
 .page-footer a {
   color: #ffffff;
   font-size: 18px;
-  padding: 12px;
+  padding: 13px 50px;
 }
 
 .page-footer a:hover {
@@ -933,8 +935,8 @@ a:hover {
   .news-and-email .mail i {
     position: absolute;
     left: 0px;
-    top: 255px;
-    margin-left: 205px;
+    top: 240px;
+    margin-left: 395px;
   }
 }
 
